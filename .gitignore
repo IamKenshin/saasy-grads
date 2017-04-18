@@ -1,0 +1,19 @@
+# Dev
+*.project
+*.classpath
+.settings/
+*.idea
+*.iml
+*.vscode/
+
+# Build
+bin/
+build/
+target/
+.gradle/
+*.jar
+*.war
+
+# Runtime
+*.ini
+*.log
