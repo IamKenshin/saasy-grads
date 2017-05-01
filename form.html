@@ -1,55 +1,10 @@
-<!DOCTYPE html>
-
-<head></head>
-
-<script>
-    var date = new Date();
-
-    var currentSemester = function() {
-        var month = date.getMonth;
-        var semester;
-        if (month <= 5 && month >= 0) {
-            semester = "Spring";
-        } else if (month < 8 && month >= 5) {
-            semester = "Summer";
-        } else {
-            semester = "Fall";
-        }
-        return semester;
-    }
-
-    function setup() {
-        var yearSelect = document.getElementById("years");
-
-        var option1 = document.createElement("option");
-        option1.text = "" + date.getFullYear();
-        var option2 = document.createElement("option");
-        option2.text = "" + (date.getFullYear() + 1);
-
-        yearSelect.add(option1);
-        yearSelect.add(option2);
-    }
-    
-
-    function addNewClassField() {
-        var newClass = document.createElement("input");
-        newClass.setAttribute("type", "text");
-        var node = document.createTextNode("");
-        newClass.appendChild(node);
-        var button = document.getElementById("addClassButton");
-
-        var classesDiv = document.getElementById("classes");
-        classesDiv.insertBefore(newClass, button);
-        classesDiv.insertBefore(document.createElement("br"), newClass);
-        classesDiv.insertBefore(document.createElement("br"), button);
-    }
-</script>
+<script src="controller.js"></script>
 
 <body onload="setup()">
     <!-- choose semester of graduation
     classes to be taken
     -->
-    <form action="#">
+    <form action="successPage.html">
         Semester of Graduation:<br>
         <select name="semester">
             <option value="spring">Spring</option>
@@ -67,6 +22,10 @@
         <div id="classes">
             <input type="text"><br>
             <input type="button" value="add new class" onclick="addNewClassField()" id="addClassButton"><br>
+        </div>
+        
+        <div id="submit">
+        	<input type="submit" value="submit" onclick="submitForm()"> <br>
         </div>
 
 
