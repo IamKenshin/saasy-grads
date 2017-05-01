@@ -1,0 +1,19 @@
+<form action="successPage.html">	<!-- TODO -->
+	Semester of Graduation:<br>
+	<select name="semester">
+            <option value="spring">Spring</option>
+            <option value="summer">Summer</option>
+            <option value="fall">Fall</option>
+        </select>
+	<br><br> Year of graduation:
+	<select name="year" id="years">
+        </select>
+	<br><br> Enter the classes you plan to take over the next two semesters:<br>
+	<div id="classes">
+		<input type="text"><br>
+		<input type="button" value="add new class" onclick="addNewClassField()" id="addClassButton"><br>
+	</div>
+
+	<div id="submit">
+		<input type="submit" value="submit" onclick="submitForm()"> <br>
+	</div>
