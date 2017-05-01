@@ -1,10 +1,20 @@
 {
 	"id": "12534",
 	"name": "Stan Dan",
-	"courses": [{
-		"name": "C1",
-		"grade": "A"
-	}],
+	"courses": [
+		{
+			"name": "CS 123",
+			"grade": "A"
+		},
+		{
+			"name": "CS 151",
+			"grade": "B+"
+		},
+		{
+			"name": "CMPE 3000",
+			"grade": "A-"
+		}
+	],
 	"semester": "Spring",
 	"year": "1756"
 }

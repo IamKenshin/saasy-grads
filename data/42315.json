@@ -1,10 +1,20 @@
 {
 	"id": "42315",
 	"name": "Ricky Bobby",
-	"courses": [{
-		"name": "C1",
-		"grade": "F++"
-	}],
+	"courses": [
+		{
+			"name": "CS 123",
+			"grade": "F#"
+		},
+		{
+			"name": "CS 151",
+			"grade": "C-"
+		},
+		{
+			"name": "CMPE 3000",
+			"grade": "No"
+		}
+	],
 	"semester": "Summer",
 	"year": "2254"
 }

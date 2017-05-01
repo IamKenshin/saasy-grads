@@ -1,10 +1,20 @@
 {
 	"id": "12345",
 	"name": "Stew Drew",
-	"courses": [{
-		"name": "C1",
-		"grade": "Z"
-	}],
+	"courses": [
+		{
+			"name": "CS 123",
+			"grade": "F"
+		},
+		{
+			"name": "CS 151",
+			"grade": "A+"
+		},
+		{
+			"name": "CMPE 3000",
+			"grade": "B-"
+		}
+	],
 	"semester": "Fall",
 	"year": "2000"
 }
