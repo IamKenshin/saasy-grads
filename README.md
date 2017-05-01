@@ -1,6 +1,7 @@
 # SaaSyGrads
 A SaaS solution for simple, intuitive graduation application submissions  
 https://github.com/IamKenshin/saasy-grads  
+http://ec2-52-11-233-5.us-west-2.compute.amazonaws.com  
 
 ## Usage
 Currently rough prototype.  
