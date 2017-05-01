@@ -19,8 +19,11 @@ app.config(['$urlRouterProvider', '$stateProvider', function ($urlRouterProvider
 				user: null
 			},
 			resolve: {
-				user: ['$stateParams', function ($stateParams) {
-					return $stateParams.user
+				user: ['$stateParams', '$http', function ($stateParams, $http) {
+					return $http.get("data/" + $stateParams.user.id + ".json")
+						.then(response => {
+							return response.data
+						})
 				}]
 			}
 		})

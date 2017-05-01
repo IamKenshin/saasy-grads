@@ -1,0 +1,10 @@
+{
+	"id": "12534",
+	"name": "Stan Dan",
+	"courses": {
+		"name": "C1",
+		"grade": "A"
+	},
+	"semester": "Spring",
+	"year": "1756"
+}
