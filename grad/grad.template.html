@@ -1,3 +1,12 @@
+<style>
+	.good {
+		color: green;
+	}
+	.bad {
+		color: red;
+	}
+</style>
+
 <h3>Student: {{$ctrl.user.name}}</h3>
 <h4>Student ID: {{$ctrl.user.id}}</h4>
 <hr>
@@ -16,5 +25,36 @@
 		<select name="year" id="year" ng-model="$ctrl.user.year">
 			<option ng-repeat="year in $ctrl.years" value="{{year}}">{{year}}</option>
 		</select>
+	</div>
+
+	<hr>
+	<table class="table table-striped">
+		<caption>Courses Taken</caption>
+		<thead>
+			<tr>
+				<th>Course</th>
+				<th>Grade</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="course in $ctrl.user.courses" ng-class="{'good': $ctrl.passed(course), 'bad': !$ctrl.passed(course)}">
+				<td>{{course.name}}</td>
+				<td>{{course.grade}}</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<hr>
+	<div ng-if="$ctrl.passedAll()">
+		<h4>Congratulations!</h4>
+		<h5>You are eligible to graduate!</h5>
+		<input class="btn btn-success" type="button" value="Graduate Me!">
+	</div>
+	<div ng-if="!$ctrl.passedAll()">
+		<h4>Oh no!</h4>
+		<h5>Looks like you're not eligible to graduate!</h5>
+		<h6>...</h6>
+		<h6>Loser</h6>
+		<input class="btn btn-danger" type="button" value=":(" disabled>
 	</div>
 </form>
